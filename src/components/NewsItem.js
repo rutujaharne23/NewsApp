@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-export class NewsItem extends Component {
-  render() {
-      let {title, description, imageUrl, newsUrl, author, date, source} = this.props;
+const NewsItem = (props) => {
+
+      let {title, description, imageUrl, newsUrl, author, date, source} = props;
     return <div className='my-3'>
         <div className="card">
             <img src={!imageUrl?"https://images.hindustantimes.com/img/2022/01/20/1600x900/Breaking-News-Live-Blog-pic_1642639780664_1642639783697.jpg":imageUrl} className="card-img-top" alt="..."/>
@@ -16,7 +15,7 @@ export class NewsItem extends Component {
             </div>
         </div>
     </div>;
-  }
+
 }
 
 export default NewsItem;
